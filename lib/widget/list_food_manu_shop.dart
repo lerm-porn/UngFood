@@ -155,7 +155,7 @@ class _ListFoodMenuShopState extends State<ListFoodMenuShop> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              FlatButton(
+              TextButton(
                 onPressed: () async {
                   Navigator.pop(context);
                   String url =
@@ -164,7 +164,7 @@ class _ListFoodMenuShopState extends State<ListFoodMenuShop> {
                 },
                 child: Text('ยืนยัน'),
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () => Navigator.pop(context),
                 child: Text('ยังไม่ลบ'),
               )

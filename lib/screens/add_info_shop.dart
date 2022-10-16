@@ -75,8 +75,9 @@ class _AddInfoShopState extends State<AddInfoShop> {
   Widget saveButton() {
     return Container(
       width: MediaQuery.of(context).size.width,
-      child: RaisedButton.icon(
-        color: MyStyle().primaryColor,
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(primary: MyStyle().primaryColor),
+        //color: MyStyle().primaryColor,
         onPressed: () {
           if (nameShop == null ||
               nameShop.isEmpty ||

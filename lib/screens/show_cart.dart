@@ -88,10 +88,12 @@ class _ShowCartState extends State<ShowCart> {
       children: <Widget>[
         Container(
           width: 150,
-          child: RaisedButton.icon(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              color: MyStyle().primaryColor,
+          child: ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  primary: MyStyle().primaryColor),
+              //color: MyStyle().primaryColor,
               onPressed: () {
                 confirmDeleteAllData();
               },
@@ -114,10 +116,12 @@ class _ShowCartState extends State<ShowCart> {
       children: <Widget>[
         Container(
           width: 150,
-          child: RaisedButton.icon(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              color: MyStyle().darkColor,
+          child: ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  primary: MyStyle().darkColor),
+              //color: MyStyle().darkColor,
               onPressed: () {
                 orderThread();
               },
@@ -257,10 +261,12 @@ class _ShowCartState extends State<ShowCart> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              RaisedButton.icon(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: MyStyle().primaryColor,
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    primary: MyStyle().primaryColor),
+                //color: MyStyle().primaryColor,
                 onPressed: () async {
                   Navigator.pop(context);
                   await SQLiteHelper().deleteAllData().then((value) {
@@ -276,10 +282,12 @@ class _ShowCartState extends State<ShowCart> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              RaisedButton.icon(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: MyStyle().primaryColor,
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    primary: MyStyle().primaryColor),
+                //color: MyStyle().primaryColor,
                 onPressed: () {
                   Navigator.pop(context);
                 },

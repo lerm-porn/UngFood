@@ -45,8 +45,11 @@ class _SignUpState extends State<SignUp> {
 
   Widget registerButton() => Container(
         width: 250.0,
-        child: RaisedButton(
-          color: MyStyle().darkColor,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: MyStyle().darkColor,
+          ),
+          //color: MyStyle().darkColor,
           onPressed: () {
             print(
                 'name = $name, user = $user, password = $password, chooseType = $chooseType');
@@ -71,36 +74,35 @@ class _SignUpState extends State<SignUp> {
         ),
       );
 
-      Future<Null> checkUser()async{
-        String url = '${MyConstant().domain}/UngFood/getUserWhereUser.php?isAdd=true&User=$user';
-        try {
-          Response response = await Dio().get(url);
-          if (response.toString() == 'null') {
-            registerThread();
-          } else {
-            normalDialog(context, 'User นี่ $user มีคนอื่นใช้ไปแล้ว กรุณาเปลี่ยน User ใหม่');
-          }
-        } catch (e) {
-        }
+  Future<Null> checkUser() async {
+    String url =
+        '${MyConstant().domain}/UngFood/getUserWhereUser.php?isAdd=true&User=$user';
+    try {
+      Response response = await Dio().get(url);
+      if (response.toString() == 'null') {
+        registerThread();
+      } else {
+        normalDialog(
+            context, 'User นี่ $user มีคนอื่นใช้ไปแล้ว กรุณาเปลี่ยน User ใหม่');
       }
+    } catch (e) {}
+  }
 
-      Future<Null> registerThread()async{
-        String url = '${MyConstant().domain}/UngFood/addUser.php?isAdd=true&Name=$name&User=$user&Password=$password&ChooseType=$chooseType';
+  Future<Null> registerThread() async {
+    String url =
+        '${MyConstant().domain}/UngFood/addUser.php?isAdd=true&Name=$name&User=$user&Password=$password&ChooseType=$chooseType';
 
-        try {
-          Response response = await Dio().get(url);
-          print('res = $response');
+    try {
+      Response response = await Dio().get(url);
+      print('res = $response');
 
-          if (response.toString() == 'true') {
-            Navigator.pop(context);
-          } else {
-            normalDialog(context, 'ไม่สามารถ สมัครได้ กรุณาลองใหม่ คะ');
-          }
-
-        } catch (e) {
-        }
-
+      if (response.toString() == 'true') {
+        Navigator.pop(context);
+      } else {
+        normalDialog(context, 'ไม่สามารถ สมัครได้ กรุณาลองใหม่ คะ');
       }
+    } catch (e) {}
+  }
 
   Widget userRadio() => Row(
         mainAxisAlignment: MainAxisAlignment.end,

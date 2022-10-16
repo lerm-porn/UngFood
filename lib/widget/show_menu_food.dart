@@ -206,10 +206,13 @@ class _ShowMenuFoodState extends State<ShowMenuFood> {
                 children: <Widget>[
                   Container(
                     width: 110,
-                    child: RaisedButton(
-                      color: MyStyle().primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: MyStyle().primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                      ),
+                      //color: MyStyle().primaryColor,
                       onPressed: () {
                         Navigator.pop(context);
                         // print(
@@ -225,10 +228,13 @@ class _ShowMenuFoodState extends State<ShowMenuFood> {
                   ),
                   Container(
                     width: 110,
-                    child: RaisedButton(
-                      color: MyStyle().primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: MyStyle().primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                      ),
+                      //color: MyStyle().primaryColor,
                       onPressed: () => Navigator.pop(context),
                       child: Text(
                         'Cancel',

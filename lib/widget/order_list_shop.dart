@@ -133,10 +133,13 @@ class _OrderListShopState extends State<OrderListShop> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          RaisedButton.icon(
-                              color: Colors.red,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30)),
+                          ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.red,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                              ),
+                              //color: Colors.red,
                               onPressed: () {},
                               icon: Icon(
                                 Icons.cancel,
@@ -146,10 +149,13 @@ class _OrderListShopState extends State<OrderListShop> {
                                 'Cancel',
                                 style: TextStyle(color: Colors.white),
                               )),
-                          RaisedButton.icon(
-                              color: Colors.green,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30)),
+                          ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.green,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                              ),
+                              //color: Colors.green,
                               onPressed: () {},
                               icon: Icon(
                                 Icons.restaurant,

@@ -58,8 +58,11 @@ class _SignInState extends State<SignIn> {
 
   Widget loginButton() => Container(
         width: 250.0,
-        child: RaisedButton(
-          color: MyStyle().darkColor,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: MyStyle().darkColor,
+          ),
+          //color: MyStyle().darkColor,
           onPressed: () {
             if (user == null ||
                 user.isEmpty ||

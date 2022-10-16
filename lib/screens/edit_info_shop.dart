@@ -90,8 +90,9 @@ class _EditInfoShopState extends State<EditInfoShop> {
 
   Widget editButton() => Container(
         width: MediaQuery.of(context).size.width,
-        child: RaisedButton.icon(
-          color: MyStyle().primaryColor,
+        child: ElevatedButton.icon(
+          style: ElevatedButton.styleFrom(primary: MyStyle().primaryColor),
+          //color: MyStyle().primaryColor,
           onPressed: () => confirmDialog(),
           icon: Icon(
             Icons.edit,
@@ -113,14 +114,14 @@ class _EditInfoShopState extends State<EditInfoShop> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              OutlineButton(
+              OutlinedButton(
                 onPressed: () {
                   Navigator.pop(context);
                   editThread();
                 },
                 child: Text('แน่ใจ'),
               ),
-              OutlineButton(
+              OutlinedButton(
                 onPressed: () => Navigator.pop(context),
                 child: Text('ไม่แน่ใจ'),
               ),

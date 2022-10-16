@@ -31,14 +31,16 @@ class _ShowShopFoodMenuState extends State<ShowShopFoodMenu> {
   BottomNavigationBarItem aboutShopNav() {
     return BottomNavigationBarItem(
       icon: Icon(Icons.restaurant),
-      title: Text('รายละเอียดร้าน'),
+      label: 'รายละเอียดร้าน',
+      //title: Text('รายละเอียดร้าน'),
     );
   }
 
   BottomNavigationBarItem showMenuFoodNav() {
     return BottomNavigationBarItem(
       icon: Icon(Icons.restaurant_menu),
-      title: Text('เมนูอาหาร'),
+      label: 'เมนูอาหาร',
+      //title: Text('เมนูอาหาร'),
     );
   }
 
