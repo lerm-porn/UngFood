@@ -71,7 +71,7 @@ class _EditFoodMenuState extends State<EditFoodMenu> {
         children: <Widget>[
           Row(
             children: <Widget>[
-              FlatButton.icon(
+              TextButton.icon(
                 onPressed: () {
                   Navigator.pop(context);
                   editValueOnMySQL();
@@ -79,7 +79,7 @@ class _EditFoodMenuState extends State<EditFoodMenu> {
                 icon: Icon(Icons.check, color: Colors.green,),
                 label: Text('เปลี่ยนแปลง'),
               ),
-              FlatButton.icon(
+              TextButton.icon(
                 onPressed: () => Navigator.pop(context),
                 icon: Icon(Icons.clear, color: Colors.red,),
                 label: Text('ไม่เปลี่ยนแปลง'),
